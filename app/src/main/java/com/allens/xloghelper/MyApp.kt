@@ -5,7 +5,7 @@ import com.allens.xlog.LogLevel
 import com.allens.xlog.LogModel
 import com.allens.xlog.XLogHelper
 
-class MyApp :Application(){
+class MyApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -20,6 +20,7 @@ class MyApp :Application(){
             .setMaxFileSize(1f)
             .setOneFileEveryday(true)
             .setCacheDays(0)
+            .setLogPath(cacheDir.absolutePath + "/xlog/")
             .setMaxAliveTime(2)
             .init()
     }
